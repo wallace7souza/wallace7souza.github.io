@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html class="">
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./dist/jquery.freskin.highlight.css">
+    <style type="text/css">.fancybox-margin {
+        margin-right: 0px;
+    }</style>
+</head>
+
+
+<body>
+
+<div class="text-center container" style="width: 400px">
+    <h1>jQuery Freskin</h1>
+
+    <h3>A jQuery plugin for highlight region of a page.</h3>
+
+    <h3>Don't believe? so try it.</h3>
+    <button id="myButton" onclick="$(this).freskin(settings).freskinShow();">magic!</button>
+
+    <h3>My others brothers will show what i can do.</h3>
+
+    <button class="btn btn-info"
+            onclick="$(this).freskin({time:3,message:'I said that i have a hint.',messageClass:'alert alert-info'}).freskinShow();">
+        I have a hint
+    </button>
+    <br>
+    <br>
+
+    <div id="timeInput">
+        <label for="time">Wait seconds to vanish</label>
+
+        <div class="input-group">
+            <select name="" id="time" class="form-control">
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+              <span class="input-group-btn">
+                <button class="btn btn-default"
+                        onclick="$('#timeInput').freskin({time:$('#time').val()}).freskinShow();">Go!
+                </button>
+              </span>
+        </div>
+        <br>
+        <br>
+        <br>
+    </div>
+    <button class="btn btn-danger" onclick="$(this).freskin({message:$('#template').html(),messageClass:'alert alert-info'}).freskinShow();">
+        I will wait your command
+    </button>
+
+</div>
+
+<div style="display: none;" id="template">
+    So...you can hide me?
+    <button onclick="$(this).freskinHide()" class="btn bt-sm btn-primary">Sure</button>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<script src="./dist/jquery.freskin.highlight.js"></script>
+
+<script>
+    var settings = {
+        time: 3
+    };
+
+</script>
+
+</body>
+</html>
