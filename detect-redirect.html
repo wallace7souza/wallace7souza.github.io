@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+  /**
+   * Determine the mobile operating system.
+   * This function returns one of 'iOS', 'Android', 'Windows Phone', or 'unknown'.
+   *
+   * @returns {String}
+   */
+  function getMobileOperatingSystem() {
+    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+    // Windows Phone must come first because its UA also contains "Android"
+    if (/windows phone/i.test(userAgent)) {
+      return "Windows Phone";
+    }
+
+    if (/android/i.test(userAgent)) {
+      return "Android";
+    }
+
+    // iOS detection from: http://stackoverflow.com/a/9039885/177710
+    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+      return "iOS";
+    }
+
+    return "unknown";
+  }
+
+  function performRedirect(){
+    var redirect = '';
+    var src = '';
+    var mobileOperatingSystem = getMobileOperatingSystem();
+    if(mobileOperatingSystem==='Android'){
+
+//      window.location.href= 'market://details?id=com.supercell.clashroyale';
+      redirect = 'market://details?id=com.supercell.clashroyale';
+      src = '/images/android.jpg';
+    }else if(mobileOperatingSystem==='iOS'){
+//      window.location.href= 'itms://itunes.apple.com/us/app/facebook/id284882215?mt=8&uo=6';
+      redirect = 'itms://itunes.apple.com/us/app/facebook/id284882215?mt=8&uo=6';
+      src = '/images/ios.png';
+    }
+
+    if(redirect!=''){
+      document.getElementById('img').src = src;
+
+      setTimeout(function(){
+        window.location.href=redirect;
+      },1000);
+    }
+
+  }
+</script>
+<body onload="performRedirect()" style="text-align: center">
+<!--<a id="link" href="market://details?id=com.supercell.clashroyale"></a>-->
+<!--<a id="link" href="www.google.com"></a>-->
+<img src="" id="img">
+</body>
+</html>
