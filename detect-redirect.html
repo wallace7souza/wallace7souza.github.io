@@ -48,9 +48,10 @@
 
     if(redirect!=''){
       document.getElementById('img').src = src;
-
+      document.getElementById('linkRedirect').src = redirect;
+        
       setTimeout(function(){
-        window.location.href=redirect;
+        document.getElementById('linkRedirect').click();
       },1000);
     }
 
@@ -60,5 +61,6 @@
 <!--<a id="link" href="market://details?id=com.supercell.clashroyale"></a>-->
 <!--<a id="link" href="www.google.com"></a>-->
 <img src="" id="img">
+    <a id="linkRedirect" target="_top"><a/>
 </body>
 </html>
