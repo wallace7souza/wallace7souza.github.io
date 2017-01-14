@@ -51,7 +51,8 @@
       document.getElementById('linkRedirect').href = redirect;
         
       setTimeout(function(){
-        document.getElementById('linkRedirect').click();
+        //document.getElementById('linkRedirect').click();
+          window.open(redirect,'_top')
       },1000);
     }
 
