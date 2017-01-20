@@ -7,9 +7,16 @@
     var OneSignal = window.OneSignal || [];
     OneSignal.push(["init", {
       appId: "8c95e57d-f715-410f-842a-9e38b03b5625",
-      autoRegister: false,
+      autoRegister: false, /* Set to true to automatically prompt visitors */
+      subdomainName: 'jenkinsembratel',
+      /*
+      subdomainName: Use the value you entered in step 1.4: http://imgur.com/a/f6hqN
+      */
+      httpPermissionRequest: {
+        enable: true
+      },
       notifyButton: {
-        enable: true /* Set to false to hide */
+          enable: true /* Set to false to hide */
       }
     }]);
   </script>
