@@ -1,13 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="manifest" href="/manifest.json">
+  	<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
+	 <script>
+    var OneSignal = window.OneSignal || [];
+    OneSignal.push(["init", {
+      appId: "8c95e57d-f715-410f-842a-9e38b03b5625",
+      autoRegister: false,
+      notifyButton: {
+        enable: true /* Set to false to hide */
+      }
+    }]);
+  </script>
 	<title></title>
 </head>
 <body>
 Hello wallace World
 
 <br/>
-<a href="./freskin-highlight">freskin highlight</a>
+<!-- <a href="./freskin-highlight">freskin highlight</a> -->
 </body>
 </html>
 
