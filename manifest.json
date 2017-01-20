@@ -1,0 +1,7 @@
+{
+  "name": "Jenkins embratel",
+  "short_name": "Jenkins embratel",
+  "start_url": "/",
+  "display": "standalone",
+  "gcm_sender_id": "482941778795"
+}
