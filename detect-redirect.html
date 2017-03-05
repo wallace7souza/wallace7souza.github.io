@@ -38,7 +38,8 @@
     if(mobileOperatingSystem==='Android'){
 
 //      window.location.href= 'market://details?id=com.supercell.clashroyale';
-      redirect = 'market://details?id=com.appcond';
+        //redirect = 'market://details?id=com.appcond';
+        redirect = 'https://play.google.com/store/apps/details?id=com.appcond';
       src = '/images/android.jpg';
     }else if(mobileOperatingSystem==='iOS'){
 //      window.location.href= 'itms://itunes.apple.com/us/app/facebook/id284882215?mt=8&uo=6';
@@ -47,14 +48,15 @@
     }
 
     if(redirect!=''){
-      document.getElementById('img').src = src;
-      document.getElementById('linkRedirect').href = redirect;
+      //document.getElementById('img').src = src;
+      //document.getElementById('linkRedirect').href = redirect;
         
-      setTimeout(function(){
+      /*setTimeout(function(){
         //document.getElementById('linkRedirect').click();
           //window.open(redirect,'_top')
           window.location.hre=redirect;
-      },1000);
+      },1000);*/
+        window.location.href=redirect;
     }
 
   }
