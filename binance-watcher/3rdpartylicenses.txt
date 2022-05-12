@@ -203,12 +203,6 @@ font-awesome
 macd
 MIT
 
-math-array
-MIT
-
-moving-averages
-MIT
-
 rxjs
 Apache-2.0
                                Apache License
