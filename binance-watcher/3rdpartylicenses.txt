@@ -200,6 +200,15 @@ firebase/remote-config
 font-awesome
 (OFL-1.1 AND MIT)
 
+macd
+MIT
+
+math-array
+MIT
+
+moving-averages
+MIT
+
 rxjs
 Apache-2.0
                                Apache License
